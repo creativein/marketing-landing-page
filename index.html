@@ -381,6 +381,24 @@
 
     </script>-->
 
+     <script>
+        
+         document.getElementById('consultationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+    
+            // Disable the form elements
+            let form = document.getElementById('consultationForm');
+            for (let element of form.elements) {
+                element.disabled = true;
+            }
+
+            setTimeout(() => {
+                form.submit(); // Normally, you'd handle the submission here
+            }, 2000); // Delay for 2 seconds (2000 milliseconds)
+        });
+
+    </script>
+
     <script>
 
         $(document).ready(function () {
